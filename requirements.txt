@@ -1,0 +1,11 @@
+# Tested with Python 3.12.3, CUDA 12.1, NVIDIA RTX 4080 Laptop GPU
+# Install PyTorch from the CUDA 12.1 index first:
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1
+mamba-ssm==2.3.2.post1
+einops==0.8.2
+numpy
+scipy
+pandas
+scikit-learn
+matplotlib

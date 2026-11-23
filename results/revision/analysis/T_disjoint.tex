@@ -1,0 +1,27 @@
+\begin{table*}[!t]
+\centering
+\caption{Random versus spatially disjoint split (30 labelled pixels per class, PCA-30). Mean $\pm$ sample standard deviation over 10 seeds; Drop: random minus disjoint, in percentage points. Disjoint: block partition with a guard band of 6 pixels, so no test pixel lies inside a training patch. Bold: best mean per dataset and metric; $^{*}$: significantly lower than the best model (two-sided paired Wilcoxon signed-rank test over seeds, Holm-adjusted $p<0.05$). On Indian Pines, classes absent from a disjoint test set are excluded from mIoU.}
+\label{tab:disjoint}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{llcccccc}
+\toprule
+ & & \multicolumn{3}{c}{\textbf{OA (\%)}} & \multicolumn{3}{c}{\textbf{mIoU (\%)}} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+\textbf{Dataset} & \textbf{Model} & Random & Disjoint & Drop & Random & Disjoint & Drop \\
+\midrule
+\multirow{3}{*}{Indian Pines} & HybridSN & $81.85 \pm 2.56^{*}$ & $53.82 \pm 7.12^{*}$ & $28.0$ & $75.25 \pm 2.16$ & $41.53 \pm 6.18^{*}$ & $33.7$ \\
+ & SpectralFormer & $\mathbf{88.71 \pm 4.76}$ & $\mathbf{65.40 \pm 8.78}$ & $23.3$ & $74.68 \pm 5.67$ & $\mathbf{54.42 \pm 5.06}$ & $20.3$ \\
+ & S2Mamba & $87.90 \pm 2.33$ & $57.11 \pm 8.47^{*}$ & $30.8$ & $\mathbf{78.99 \pm 4.62}$ & $46.55 \pm 7.38^{*}$ & $32.4$ \\
+\midrule
+\multirow{3}{*}{Pavia University} & HybridSN & $\mathbf{92.96 \pm 2.08}$ & $\mathbf{78.38 \pm 8.05}$ & $14.6$ & $86.24 \pm 3.81$ & $\mathbf{70.26 \pm 6.45}$ & $16.0$ \\
+ & SpectralFormer & $91.32 \pm 4.61$ & $74.82 \pm 7.39$ & $16.5$ & $83.54 \pm 5.43$ & $62.85 \pm 7.20$ & $20.7$ \\
+ & S2Mamba & $92.42 \pm 3.87$ & $74.55 \pm 7.31$ & $17.9$ & $\mathbf{87.45 \pm 4.43}$ & $61.82 \pm 5.44^{*}$ & $25.6$ \\
+\midrule
+\multirow{3}{*}{Salinas} & HybridSN & $93.33 \pm 0.96$ & $\mathbf{81.90 \pm 7.23}$ & $11.4$ & $94.03 \pm 0.86$ & $79.83 \pm 8.51$ & $14.2$ \\
+ & SpectralFormer & $\mathbf{93.40 \pm 3.55}$ & $80.52 \pm 6.72$ & $12.9$ & $\mathbf{94.83 \pm 2.15}$ & $\mathbf{81.48 \pm 4.85}$ & $13.4$ \\
+ & S2Mamba & $92.80 \pm 3.78$ & $78.21 \pm 8.07$ & $14.6$ & $94.31 \pm 2.48$ & $76.12 \pm 6.66^{*}$ & $18.2$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

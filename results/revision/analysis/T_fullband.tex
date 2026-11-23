@@ -1,0 +1,24 @@
+\begin{table*}[!t]
+\centering
+\caption{All spectral bands versus PCA-30 (random split, 30 labelled pixels per class, same splits). Mean $\pm$ sample standard deviation; Diff: all bands minus PCA-30 in percentage points with its 95\% confidence interval over seeds.}
+\label{tab:fullband}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llcccccc}
+\toprule
+ & & \multicolumn{3}{c}{\textbf{OA (\%)}} & \multicolumn{3}{c}{\textbf{mIoU (\%)}} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+\textbf{Dataset} & \textbf{Model} & PCA-30 & All bands & Diff & PCA-30 & All bands & Diff \\
+\midrule
+Indian Pines & HybridSN & $81.78 \pm 2.01$ & $78.49 \pm 5.93$ & $-3.3$ [-11.4, +4.8] & $75.35 \pm 2.37$ & $70.71 \pm 4.70$ & $-4.6$ [-10.9, +1.6] \\
+Indian Pines & SpectralFormer & $89.47 \pm 5.53$ & $87.36 \pm 1.57$ & $-2.1$ [-7.2, +3.0] & $75.13 \pm 5.95$ & $73.64 \pm 3.98$ & $-1.5$ [-5.0, +2.1] \\
+Indian Pines & S2Mamba & $88.19 \pm 1.30$ & $87.78 \pm 5.47$ & $-0.4$ [-8.0, +7.2] & $80.79 \pm 2.78$ & $82.12 \pm 6.52$ & $+1.3$ [-9.3, +12.0] \\
+Pavia University & HybridSN & $93.31 \pm 1.49$ & $89.01 \pm 5.05$ & $-4.3$ [-12.3, +3.7] & $86.93 \pm 3.36$ & $80.07 \pm 4.55$ & $-6.9$ [-15.4, +1.7] \\
+Pavia University & SpectralFormer & $90.96 \pm 6.59$ & $83.46 \pm 3.82$ & $-7.5$ [-16.8, +1.8] & $82.74 \pm 7.73$ & $75.74 \pm 1.48$ & $-7.0$ [-17.4, +3.4] \\
+Pavia University & S2Mamba & $94.37 \pm 3.13$ & $93.90 \pm 3.92$ & $-0.5$ [-8.3, +7.4] & $89.48 \pm 3.98$ & $90.47 \pm 3.51$ & $+1.0$ [-6.7, +8.7] \\
+Salinas & HybridSN & $93.09 \pm 0.92$ & $89.09 \pm 3.12$ & $-4.0$ [-7.9, -0.1] & $93.67 \pm 0.93$ & $89.48 \pm 3.24$ & $-4.2$ [-9.0, +0.6] \\
+Salinas & SpectralFormer & $94.43 \pm 2.91$ & $92.30 \pm 3.23$ & $-2.1$ [-6.3, +2.0] & $95.56 \pm 2.08$ & $92.87 \pm 3.96$ & $-2.7$ [-7.8, +2.4] \\
+Salinas & S2Mamba & $94.29 \pm 2.26$ & $93.95 \pm 2.54$ & $-0.3$ [-2.4, +1.7] & $95.34 \pm 1.21$ & $95.37 \pm 1.69$ & $+0.0$ [-1.3, +1.3] \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,31 @@
+\begin{table*}[!t]
+\centering
+\caption{Accuracy on boundary and interior test pixels (PCA-30, 30 labelled pixels per class). Boundary pixels have at least one 8-neighbour with a different label, unlabelled pixels included. Values are means over seeds; Gap: interior minus boundary OA in percentage points.}
+\label{tab:boundary}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lllcccccc}
+\toprule
+\textbf{Dataset} & \textbf{Split} & \textbf{Model} & \textbf{Boundary (\%)} & \textbf{OA bnd.} & \textbf{OA int.} & \textbf{Gap} & \textbf{F1 bnd.} & \textbf{F1 int.} \\
+\midrule
+Indian Pines & random & HybridSN & $25.8$ & $72.56$ & $85.09$ & $12.5$ & $77.24$ & $89.68$ \\
+Indian Pines & random & S2Mamba & $25.8$ & $78.29$ & $91.25$ & $13.0$ & $80.07$ & $90.90$ \\
+Indian Pines & random & SpectralFormer & $25.8$ & $77.12$ & $92.74$ & $15.6$ & $75.70$ & $88.94$ \\
+Indian Pines & disjoint & HybridSN & $25.6$ & $45.70$ & $56.71$ & $11.0$ & $47.57$ & $55.22$ \\
+Indian Pines & disjoint & S2Mamba & $25.6$ & $50.66$ & $59.52$ & $8.9$ & $52.58$ & $60.20$ \\
+Indian Pines & disjoint & SpectralFormer & $25.6$ & $56.60$ & $68.46$ & $11.9$ & $59.98$ & $67.11$ \\
+Pavia University & random & HybridSN & $35.3$ & $89.81$ & $94.69$ & $4.9$ & $88.65$ & $94.08$ \\
+Pavia University & random & S2Mamba & $35.3$ & $92.47$ & $92.39$ & $-0.1$ & $90.56$ & $93.22$ \\
+Pavia University & random & SpectralFormer & $35.3$ & $89.27$ & $92.44$ & $3.2$ & $87.51$ & $91.37$ \\
+Pavia University & disjoint & HybridSN & $32.0$ & $83.34$ & $76.10$ & $-7.2$ & $79.21$ & $78.48$ \\
+Pavia University & disjoint & S2Mamba & $32.0$ & $79.26$ & $72.15$ & $-7.1$ & $71.97$ & $70.86$ \\
+Pavia University & disjoint & SpectralFormer & $32.0$ & $78.38$ & $73.08$ & $-5.3$ & $73.46$ & $73.36$ \\
+Salinas & random & HybridSN & $11.8$ & $91.06$ & $93.63$ & $2.6$ & $91.68$ & $97.16$ \\
+Salinas & random & S2Mamba & $11.8$ & $91.19$ & $93.01$ & $1.8$ & $91.59$ & $97.29$ \\
+Salinas & random & SpectralFormer & $11.8$ & $92.28$ & $93.55$ & $1.3$ & $93.26$ & $97.47$ \\
+Salinas & disjoint & HybridSN & $11.0$ & $82.29$ & $81.88$ & $-0.4$ & $82.03$ & $86.81$ \\
+Salinas & disjoint & S2Mamba & $11.0$ & $79.18$ & $78.14$ & $-1.0$ & $78.27$ & $84.38$ \\
+Salinas & disjoint & SpectralFormer & $11.0$ & $83.14$ & $80.23$ & $-2.9$ & $83.27$ & $88.08$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

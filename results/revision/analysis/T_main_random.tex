@@ -1,0 +1,25 @@
+\begin{table*}[!t]
+\centering
+\caption{Classification accuracy metrics across datasets and models (random split, 30 labelled pixels per class, PCA-30). Results are mean $\pm$ sample standard deviation over 10 seeds. Bold: best mean per dataset and metric; $^{*}$: significantly lower than the best model (two-sided paired Wilcoxon signed-rank test over seeds, Holm-adjusted $p<0.05$). OA: overall accuracy; AA: average accuracy; mIoU: mean intersection over union.}
+\label{tab:benchmark_accuracy}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Dataset} & \textbf{Model} & \textbf{OA (\%)} & \textbf{AA (\%)} & \textbf{Kappa} & \textbf{Macro F1 (\%)} & \textbf{mIoU (\%)} \\
+\midrule
+\multirow{3}{*}{Indian Pines} & HybridSN & $81.85 \pm 2.56^{*}$ & $90.77 \pm 0.68^{*}$ & $0.7947 \pm 0.028^{*}$ & $84.52 \pm 1.69$ & $75.25 \pm 2.16$ \\
+ & SpectralFormer & $\mathbf{88.71 \pm 4.76}$ & $93.34 \pm 2.91$ & $\mathbf{0.8717 \pm 0.054}$ & $83.93 \pm 3.94$ & $74.68 \pm 5.67$ \\
+ & S2Mamba & $87.90 \pm 2.33$ & $\mathbf{93.94 \pm 1.37}$ & $0.8626 \pm 0.026$ & $\mathbf{87.16 \pm 3.32}$ & $\mathbf{78.99 \pm 4.62}$ \\
+\midrule
+\multirow{3}{*}{Pavia University} & HybridSN & $\mathbf{92.96 \pm 2.08}$ & $94.34 \pm 1.36$ & $\mathbf{0.9079 \pm 0.027}$ & $92.09 \pm 2.42$ & $86.24 \pm 3.81$ \\
+ & SpectralFormer & $91.32 \pm 4.61$ & $93.06 \pm 2.47$ & $0.8878 \pm 0.057$ & $90.67 \pm 3.48$ & $83.54 \pm 5.43$ \\
+ & S2Mamba & $92.42 \pm 3.87$ & $\mathbf{95.14 \pm 1.93}$ & $0.9017 \pm 0.049$ & $\mathbf{92.95 \pm 2.71}$ & $\mathbf{87.45 \pm 4.43}$ \\
+\midrule
+\multirow{3}{*}{Salinas} & HybridSN & $93.33 \pm 0.96$ & $97.07 \pm 0.49$ & $0.9257 \pm 0.011$ & $96.62 \pm 0.53$ & $94.03 \pm 0.86$ \\
+ & SpectralFormer & $\mathbf{93.40 \pm 3.55}$ & $\mathbf{97.44 \pm 1.40}$ & $\mathbf{0.9267 \pm 0.039}$ & $\mathbf{96.95 \pm 1.49}$ & $\mathbf{94.83 \pm 2.15}$ \\
+ & S2Mamba & $92.80 \pm 3.78$ & $97.17 \pm 1.53$ & $0.9200 \pm 0.042$ & $96.64 \pm 1.73$ & $94.31 \pm 2.48$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
